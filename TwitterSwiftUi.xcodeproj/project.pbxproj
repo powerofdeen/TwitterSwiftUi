@@ -36,6 +36,7 @@
 		709B6CAC29655E46008162DB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 709B6CAB29655E46008162DB /* FirebaseFirestore */; };
 		709B6CAE29655E46008162DB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 709B6CAD29655E46008162DB /* FirebaseFirestoreSwift */; };
 		709B6CB029655E46008162DB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 709B6CAF29655E46008162DB /* FirebaseStorage */; };
+		709B6CB2296561AD008162DB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709B6CB1296561AD008162DB /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		709B6C9F29654367008162DB /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		709B6CA22965458F008162DB /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		709B6CA629655948008162DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		709B6CB1296561AD008162DB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 		709B6C9829653AAF008162DB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				709B6CB1296561AD008162DB /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				709B6C9C29653BF2008162DB /* RegistrationView.swift in Sources */,
 				700DA8F32963C60E00022E99 /* NewTweetView.swift in Sources */,
 				709B6CA32965458F008162DB /* AuthHeaderView.swift in Sources */,
+				709B6CB2296561AD008162DB /* AuthViewModel.swift in Sources */,
 				709B6C9E29653D72008162DB /* RoundedShape.swift in Sources */,
 				700E4FA62962A77400F5CE50 /* UserRowView.swift in Sources */,
 				700E4F972962983E00F5CE50 /* ExploreView.swift in Sources */,
