@@ -16,6 +16,25 @@ struct RegistrationView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
+        Group {
+            if viewModel.didAuthenticateUser {
+                ProfilePhotoSelectorView()
+            } else {
+                registrationView
+            }
+        }
+    }
+}
+
+struct RegistrationView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegistrationView()
+            .environmentObject(AuthViewModel())
+    }
+}
+
+extension RegistrationView {
+    var registrationView: some View {
         VStack {
             AuthHeaderView(title1: "Get stared.", title2: "Create your account")
             
@@ -61,11 +80,5 @@ struct RegistrationView: View {
 
         }
         .ignoresSafeArea()
-    }
-}
-
-struct RegistrationView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegistrationView()
     }
 }
