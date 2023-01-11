@@ -6,38 +6,45 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TweetRowView: View {
+    let tweet: Tweet
+    
     var body: some View {
         VStack(alignment: .leading) {
             
             // 프로필 이미지 + 사용자 정보 + 트윗
-            HStack(alignment: .top, spacing: 12) {
-                Circle()
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(Color(.systemBlue))
-                
-                // 사용자 정도 & 트윗
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack {
-                        Text("Jaewon Seo")
-                            .font(.subheadline).bold()
+            if let user = tweet.user {
+                HStack(alignment: .top, spacing: 12) {
+                    KFImage(URL(string: user.profileImageUrl))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 56, height: 56)
+                        .clipShape(Circle())
+                    
+                    // 사용자 정도 & 트윗
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack {
+                            Text(user.fullname)
+                                .font(.subheadline).bold()
+                            
+                            Text("@\(user.username)")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                            
+                            Text("2w")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                            
+                        }
                         
-                        Text("@powerofdeen")
-                            .foregroundColor(.gray)
-                            .font(.caption)
-                        
-                        Text("2w")
-                            .foregroundColor(.gray)
-                            .font(.caption)
-                        
+                        Text(tweet.caption)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.leading)
                     }
                     
-                    Text("아이폰 트위터 클론 앱")
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
                 }
-                
             }
             // 버튼
             HStack {
@@ -83,8 +90,8 @@ struct TweetRowView: View {
     }
 }
 
-struct TweetRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetRowView()
-    }
-}
+//struct TweetRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TweetRowView()
+//    }
+//}
