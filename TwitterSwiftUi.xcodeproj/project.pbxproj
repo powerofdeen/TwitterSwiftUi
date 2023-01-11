@@ -265,7 +265,6 @@
 			children = (
 				70507F4A296D41D900ECBC47 /* ViewModel */,
 				70507F49296D41D500ECBC47 /* Views */,
-				700E4F8D296262FB00F5CE50 /* TweetRowView.swift */,
 			);
 			path = Tweets;
 			sourceTree = "<group>";
@@ -383,6 +382,7 @@
 		70507F49296D41D500ECBC47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				700E4F8D296262FB00F5CE50 /* TweetRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
